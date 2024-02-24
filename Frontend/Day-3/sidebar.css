@@ -1,0 +1,289 @@
+/* Bootstrap 4 breakpoints & gutter */
+/* $grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+
+grid-gutter-width: 30px !default; */
+
+/* Number of cards per line for each breakpoint */
+/* $cards-per-line: (
+    xs: 1,
+    sm: 2,
+    md: 3,
+    lg: 4,
+    xl: 5
+); */
+@each $name, $breakpoint in $grid-breakpoints {
+    @media (min-width: $breakpoint) {
+        .card-deck .card {
+            flex: 0 0 calc(#{100/map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
+        }
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-image: url();
+}
+h2{
+    color: #ffffff;
+}
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f0f7fd;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #000000;
+}
+
+main .sidebar {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.material-icons,
+.icon-text {
+    vertical-align: left;
+}
+
+.material-icons {
+    margin-right: 35px;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+    margin-left: 250px;
+    overflow-x: hidden;
+
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+
+.box {
+  display: flex; 
+  padding: 40px;
+}
+
+.box1{
+  padding-top: 40px;
+  width: 250px;
+  height: 250px;
+  /* background-color: lightblue; */
+  background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/courses/2964/banners/651aa0f9ba2d0_Language-06.jpg?d=800x420);
+  margin-right: 40px;
+  margin-left: 20px;
+  border: 2px solid rgb(204, 202, 202);
+  border-radius: 7px;
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+.box1 button{
+  margin-top: 120px;
+}
+.box2{
+  padding-top: 40px;
+  background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/courses/3030/banners/651aa0dfe308c_Language-05.jpg?d=800x420);
+  width: 250px;
+  height: 250px;
+  /* background-color: lightblue; */
+  margin-right: 40px;
+  border: 2px solid rgb(204, 202, 202);
+  border-radius: 7px;
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+.box2 button{
+  margin-top: 120px;
+}
+.box3{
+  padding-top: 40px;
+  width: 250px;
+  height: 250px;
+  /* background-color: lightblue; */
+  background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/courses/2931/banners/651aa11852590_Language-07.jpg?d=800x420);
+  margin-right: 40px;
+  border: 2px solid rgb(204, 202, 202);
+  border-radius: 7px;
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+.box3 button{
+  margin-top: 120px;
+}
+.box4{
+  padding-top: 40px;
+  width: 250px;
+  height: 250px;
+  /* background-color: lightblue; */
+  background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/courses/4482/banners/658536695f13f_AI_ML.jpg?d=800x420);
+  margin-right: 40px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+  /* background-position:   center; */
+  border: 2px solid rgb(204, 202, 202);
+  border-radius: 7px;
+}
+
+.box4 button{
+  margin-top: 120px;
+}
+.box1:last-child {
+  margin-right: 0;
+}
+
+.btn-primaryb{
+  padding-right: 100px;
+}
+
+.button-container {
+  display: flex;
+}
+
+.btn {
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+  margin-right: 10px;
+}
+
+.box7{
+  padding-top: 40px;
+  width: 250px;
+  height: 250px;
+  /* background-color: lightblue; */
+  background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/courses/2931/banners/654c7a253c881_Language-08.jpg?d=800x420);
+  margin-right: 40px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+  /* background-position:   center; */
+  border: 2px solid rgb(204, 202, 202);
+  border-radius: 7px;
+}
+
+.box7 button{
+  margin-top: 120px;
+}
+
+.box8{
+  padding-top: 40px;
+  width: 250px;
+  height: 250px;
+  /* background-color: lightblue; */
+  background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/courses/3921/banners/659c2569a142b_skills-07.jpg?d=800x420);
+  margin-right: 40px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+  /* background-position:   center; */
+  border: 2px solid rgb(204, 202, 202);
+  border-radius: 7px;
+}
+
+.box8 button{
+  margin-top: 120px;
+}
+
+.box9{
+  padding-top: 40px;
+  width: 250px;
+  height: 250px;
+  /* background-color: lightblue; */
+  background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/courses/4251/banners/6583d562566a6_Git.jpg?d=800x420);
+  margin-right: 40px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+  /* background-position:   center; */
+  border: 2px solid rgb(204, 202, 202);
+  border-radius: 7px;
+}
+
+.box9 button{
+  margin-top: 120px;
+}
+
+.box9{
+  padding-top: 40px;
+  width: 250px;
+  height: 250px;
+  /* background-color: lightblue; */
+  background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/courses/4251/banners/6583d562566a6_Git.jpg?d=800x420);
+  margin-right: 40px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+  /* background-position:   center; */
+  border: 2px solid rgb(204, 202, 202);
+  border-radius: 7px;
+}
+
+.box9 button{
+  margin-top: 120px;
+}
+.box5{
+  padding-top: 40px;
+  width: 250px;
+  height: 250px;
+  /* background-color: lightblue; */
+  background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/courses/4812/banners/65a4e4841c23e_Cyber_Security.jpg?d=800x420);
+  margin-right: 40px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+  /* background-position:   center; */
+  border: 2px solid rgb(204, 202, 202);
+  border-radius: 7px;
+}
+
+.box5 button{
+  margin-top: 120px;
+}
+.box6{
+  padding-top: 40px;
+  width: 250px;
+  height: 250px;
+  /* background-color: lightblue; */
+  background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/courses/4119/banners/652901854fe00_skills_2-06.jpg?d=800x420);
+  margin-right: 40px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+  /* background-position:   center; */
+  border: 2px solid rgb(204, 202, 202);
+  border-radius: 7px;
+}
+
+.box6 button{
+  margin-top: 120px;
+}
